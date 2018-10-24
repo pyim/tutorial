@@ -1,0 +1,270 @@
+/* DOCUMENT INFORMATION
+	- Document: Formao Theme
+	- Version:  1.0.0
+	- Author:   Philippe YIM
+*/
+
+
+/* COLORS */
+:root {
+  --background: white;
+  --secondary: HSL(225, 6%, 51%);
+  --formao: #fed330;
+  --base: #282F44;
+  --base2: HSL(225, 6%, 21%);
+  --text-color: HSL(225, 6%, 21%);
+  --link-color: #093341;
+}
+
+
+
+/* FONTS
+	- default Proxima Nova, sans serif
+*/
+
+
+/* CSS DIRECTORY
+	1. =GLOBAL
+	2. =HEADER
+
+*/
+
+
+
+/*  GLOBAL
+	======================================= */ 
+
+html {
+    font-size: 1em;
+    line-height: 1.5;
+    height: 100%;
+}
+
+body {
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+body, h1, h2 {
+  font-family:'Proxima Nova', Georgia, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.underline-dotted {
+  border-bottom: 2px #999 dotted;
+}
+
+
+.screenshot {
+    border: solid 2px #e5e5e5;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+}
+
+.screenshot-gif {
+    border: solid 2px #e5e5e5;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+
+ol {
+        list-style-type: decimal;
+
+}
+
+
+/*  CSS GRID
+	======================================= */ 
+
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+        "header  header"
+        "sidebar content"
+        "footer  footer";
+}
+
+@media (max-width: 500px) {
+    .wrapper {
+        grid-template-columns: 4fr;
+        grid-template-areas:
+            "header"
+            "content"
+            "sidebar"
+            "footer";
+    }
+}
+
+
+
+
+/*  HEADER
+	======================================= */
+
+header {
+    grid-area: header;
+    background-color: #fed330;
+    padding: 20px;
+}
+
+
+
+
+/*  NAVBAR
+	======================================= */
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 14px;
+}
+
+nav a {
+  color: var(--primary);
+  text-decoration: none;
+
+      
+}
+ 
+nav a:hover {
+  text-decoration: none;
+}
+
+
+
+
+/*  ASIDE
+	======================================= */
+
+aside {
+    grid-area: sidebar;
+    background-color: var(--background);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 20px;
+}
+
+aside ul li {
+    list-style: none;
+    
+}
+
+aside a {
+    text-decoration: none;
+    color : #999;
+    font-weight: 400;
+}
+
+.table-contents:before {
+    content: 'Contenu :';
+    font-size: 18px;
+    color: #3a3a3a;
+    margin-left: 10px;
+}
+
+
+/*  ARTICLE
+	======================================= */
+
+.breadcrumb {
+    color :#49b293;
+    margin-top: 0;
+    margin-bottom: 10px;
+    list-style: none;
+    padding-left: 0;
+    text-transform: uppercase;
+}
+
+.breadcrumb li {
+    display: inline-block;
+    
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #49b293;
+    box-shadow: none;
+}
+
+.breadcrumb li+li:before {
+    padding-left: 8px;
+    padding-right: 8px;
+    content: ">";
+    color: #a6a6a6;
+}
+
+.article-info div {
+    display: inline-block;
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+
+}
+
+.author a {
+    color: var(--base);
+    text-decoration: none;
+}
+
+
+article {
+    grid-area: content;
+    background-color: var(--background);
+    padding: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    width: 800px;
+}
+
+
+.link {
+    color: var(--base);
+    text-decoration: none;
+    outline: none;
+    box-shadow: inset 0 -3px 0 var(--formao);
+}
+
+.link:hover {
+    background-color: var(--formao);
+}
+
+.note {
+    background-color: #f4f2d4;
+    color: #3a3a3a;
+    white-space: normal;
+    display: block;
+    padding: 13px 17px;
+    margin-bottom: 22px;
+    font-size: 15px;
+    line-height: 26px;
+    border-radius: 10px;
+}
+
+/*  FOOTER
+	======================================= */
+
+footer {
+    padding: 20px;
+    grid-area: footer;
+    background-color: #fd9644;
+}
+
+
+
+
+
