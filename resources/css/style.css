@@ -55,23 +55,6 @@ body, h1, h2 {
   border-bottom: 2px #999 dotted;
 }
 
-
-.screenshot {
-    border: solid 2px #e5e5e5;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 600px;
-}
-
-.screenshot-gif {
-    border: solid 2px #e5e5e5;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px;
-}
-
 ol {
         list-style-type: decimal;
 
@@ -230,6 +213,15 @@ article {
     position: sticky;
     width: 800px;
 }
+
+article ol li img {
+    border: solid 2px #e5e5e5;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+}
+
 
 
 .link {
