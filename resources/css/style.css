@@ -9,7 +9,7 @@
 :root {
   --background: white;
   --secondary: HSL(225, 6%, 51%);
-  --formao: #fed330;
+  --formao: rgb(237, 197, 46);
   --base: #282F44;
   --base2: HSL(225, 6%, 21%);
   --text-color: HSL(225, 6%, 21%);
@@ -57,7 +57,14 @@ body, h1, h2 {
 
 ol {
         list-style-type: decimal;
+}
 
+.btn-login {
+    border: .8px solid #fff;
+    border-radius: 5px;
+    padding: 2px 5px;
+    color: #fff
+    
 }
 
 
@@ -102,6 +109,13 @@ header {
 
 /*  NAVBAR
 	======================================= */
+.logo {
+    float: left;
+}
+
+nav {
+    float: right;
+}
 
 nav ul {
   list-style: none;
@@ -111,7 +125,10 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin-right: 14px;
+    margin-right: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    
 }
 
 nav a {
@@ -154,12 +171,19 @@ aside a {
 }
 
 .table-contents:before {
-    content: 'Contenu :';
+    content: 'Guide étape par étape :';
     font-size: 18px;
     color: #3a3a3a;
     margin-left: 10px;
 }
 
+.table-contents ul li {
+    margin-bottom: 20px;
+}
+
+.table-contents li.active a {
+    color: var(--base);
+}
 
 /*  ARTICLE
 	======================================= */
@@ -204,6 +228,12 @@ aside a {
     text-decoration: none;
 }
 
+.duration {
+    float: right;
+}
+.difficult {
+    margin-right: 20px;
+}
 
 article {
     grid-area: content;
