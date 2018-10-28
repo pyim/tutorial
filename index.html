@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet" type="text/css" href="resources/fonts/fonts.min.css" />
 
+
+
 </head>
 
 <body>
@@ -42,9 +44,28 @@
 
 
         <aside class="table-contents">
+
+                
+                
+
+
             <ul>
                 <li><a href="">Pré-requis</a></li>
-                <li class="active"><a href="">Etape 1 - Installer Worpdress</a></li>
+
+                <li class="active">
+                    <a href="#" title="Installer Worpdress">
+                        <label for="menu-toggle">Etape 1 - Installer Worpdress</label>
+                    </a>
+                    <input type="checkbox" id="menu-toggle"/>
+                        <ul id="menu">
+                                <li><a>Pourquoi Wordpress ?</a></li>
+                                <li><a>Qu'est qu'un CMS ?</a></li>
+                                <li><a>Wordpress.org ou Wordpress.com ?</a></li>
+                                <li><a>Installer Wordpress avec Xampp</a></li>
+                                <li><a>Télécharger Xampp</a></li>
+                        </ul>
+                </li>
+
                 <li><a href="">Etape 2 - Ajouter un article</a></li>
                 <li><a href="">Etape 3 - Gérer les images</a></li>
                 <li><a href="">Etape 4 - Créer une page</a></li>
@@ -55,6 +76,9 @@
                 <li><a href="">Etape 9 - Sécurité et sauvegarde</a></li>
                 <li><a href="">Etape 10 - Migrer Wordpress local en ligne</a></li>
             </ul>
+
+ 
+         
         </aside>
 
 
@@ -106,19 +130,19 @@
                             <li>Gérer vos URL pour améliorer votre référencement internet SEO.</li>
                         </ul>
 
-                        <h2>Wordpress.org ou Wordpress.com ?</h2>
+                <h2>Wordpress.org ou Wordpress.com ?</h2>
                         <p>Vous pouvez installer votre site Wordpress sur ces 2 plate-formes. La différence entre les deux concerne l'hébergement du site. Avec worpdress.org vous devez télécharger le fichier source et l'installer vous-même sur votre propre serveur ou en local sur votre ordinateur. Tandis que sur Wordpress.com on s'occupe de toute l'installation. Il y a des avantages et des inconvénients :</p>
                         <p><b>Wordpress.com : </b>Vous avez deux offres, une <span class="underline-dotted">gratuite</span> et une <span class="underline-dotted">payante</span>, l'offre <span class="underline-dotted">gratuite</span> en moins de cinq minutes vous avez votre premier site Internet par contre vous ne pourrez pas utiliser de nom de domaine personnalisé exemple www.monblog.com puisqu'un nom de domaine vous sera attribuée exemple monblog.wordpress.com. Pas terrible si Wordpress est utilisé pour une activité professionnelle... Vous ne pourrais pas non plus installer des thèmes ou des plugins personnalisés. L'offre <span class="underline-dotted">payante</span> moyennant quelques euros vous pourrez utiliser votre nom de domaine personnalisé www.monblog.com mais l'installation de thèmes et de plug-ins et limités.</p>
                         <p><b>Wordpress.org : </b>Installez vous-même votre Wordpress dans un hébergeur offre plus de flexibilité. Vous pourrez utiliser votre propre nom de domaine, installer des thèmes, des plugines mais surtout vous pouvez accéder à vos fichiers Wordpress. De nombreux sites Wordpress sont auto-hébergé avec cette solution Wordpress.org.
 
                             <p>Cette documentation portera sur l'installation d'un Wordpress via wordpress.org. Nous allons installer nous-mêmes Wordpress sur notre propre serveur en local, c'est à dire sur notre ordinateur.</p>
 
-                            <h2>Etape 1 - Installer Wordpress avec Xampp</h2>
+                    <h2>Installer Wordpress avec Xampp</h2>
                             <p> Bon avant de commencer, un peu des techniques, mais promis dans ce doil y en aura pas d'autre dans ce tutorial :). Pour installer Wordpress on aura besoin de créer un serveur web, en effet la structure de Wordpress est codé dans le langage PHP et sa base de données parle le SQL. Pour que PHP fonctionne il doit être installé sur un serveur web appellé Apache. Et Apache s'installe sur un système d'exploitation qui est Linux (Le Windows gratuit). On appelle ça un serveur LAMP (Linux, Apache, MySQL, PHP). c'est la clé pour faire tourner Wordpress. Rassurez vous on va faire tout ça en quelques clics grâce notamment avec Xampp. C'est quoi Xampp ? C'est une application qui vas créer virtuellement un serveur sur votre PC et nous installerons Wordpress dans ce dernier.</p>
 
                             <p class="note"><strong>Note :</strong> Dans cet tutorial nous allons installer Xampp pour <strong>Windows</strong>, une documentation pour les utilisateurs de <strong>Mac</strong> est en cours de rédaction.</p>
 
-                            <h3>Télécharger Xampp :</h3>
+                    <h3>Télécharger Xampp :</h3>
                             <p>Télécharger et installer Xampp :<p>
                                     <ol>
                                         <li>Allez sur le site <a class="link" href="https://www.apachefriends.org/fr/index.html" target="_blank" title="Xampp">Xampp</a></li>
@@ -126,7 +150,7 @@
                                         <li>Lancez l'installation.</li>
                                     </ol>
 
-                                    <h3>Installer Xampp :</h3>
+                    <h3>Installer Xampp :</h3>
                                     <ol>
                                         <li>Lancez l'installation.</li>
                                         <li>Nous allons installer uniquement ce que nous avons besoin : <strong>Apache, MySQL, PHP, phpMyAdmin</strong>
@@ -139,7 +163,7 @@
                                         </li>
                                         <li>Cliquez sur le bouton <strong>Finish</strong>.</li>
                                     </ol>
-                                    <h3>Démarrer Xampp :</h3>
+                    <h3>Démarrer Xampp :</h3>
                                     <ol>
                                         <li>Choisissez la langue <strong>Anglaise</strong> ou Allemande.</li>
                                         <li>Démarrez le serveur <strong>Apache</strong> et <strong>MySQL</strong>.
@@ -150,7 +174,7 @@
                                         <li>Lancez <strong>Chrome ou Firefox</strong>, dans la barre d'url tapez l'adresse : <strong>localhost/dashboard</strong> , la page par défaut du serveur Xampp apparaît. Notre serveur fonctionne 🎉, on va maintenant installer Wordpress dans notre serveur.
                                             <img src="resources/images/wordpress-les-bases/01-installer-wordpress/10-page-accueil-xampp.jpg" alt="page-xampp"></li>
                                     </ol>
-                                    <h3>Télécharger Wordpress :</h3>
+                    <h3>Télécharger Wordpress :</h3>
                                     <ol>
                                         <li>Allons sur le site de <a class="link" href="https://fr.wordpress.org/download/" title="Télécharger Wordpress">Wordpress.org</a> et cliquez sur le bouton <strong>Télécharger Wordpress</strong>.</li>
                                         <li>Décompressez le fichier téléchargé, déplacer le dossier <strong>wordpress</strong> dans le <strong>dossier de votre serveur</strong>, dans notre exemple l'adresse est <strong>C:/xampp/htdocs</strong>.
@@ -158,7 +182,7 @@
                                         </li>
                                     </ol>
 
-                                    <h3>Démarrer l'installation de Wordpress :</h3>
+                    <h3>Démarrer l'installation de Wordpress :</h3>
                                     <ol>
                                         <li>Retournons sur notre navigateur et tapons <strong>localhost/wordpress</strong>. On est aussitôt redirigé sur la page d'installation de Wordpress. Cliquez sur le bouton : <strong>C'est parti ! 👏</strong>
                                             <img alt="installation wordpress" src="resources/images/wordpress-les-bases/01-installer-wordpress/12-intaller-wordpress-etape1.jpg">
@@ -226,7 +250,9 @@
     <footer>formao 2018</footer>
 
 
-
 </body>
+
+
+
 
 </html>
